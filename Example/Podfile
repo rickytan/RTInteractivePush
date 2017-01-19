@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'InteractivePush_Example' do
+  pod 'InteractivePush', :path => '../'
+
+  target 'InteractivePush_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
