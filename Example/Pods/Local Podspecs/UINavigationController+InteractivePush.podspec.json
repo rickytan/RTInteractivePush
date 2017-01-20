@@ -1,0 +1,28 @@
+{
+  "name": "UINavigationController+InteractivePush",
+  "version": "0.1.0",
+  "module_name": "RTInteractivePush",
+  "summary": "A short description of InteractivePush.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/rickytan/UINavigationController+InteractivePush",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ricky Tan": "ricky.tan.xin@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/rickytan/UINavigationController+InteractivePush.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ]
+}

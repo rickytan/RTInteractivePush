@@ -1,0 +1,6 @@
+framework module RTInteractivePush {
+  umbrella header "UINavigationController+InteractivePush-umbrella.h"
+
+  export *
+  module * { export * }
+}
