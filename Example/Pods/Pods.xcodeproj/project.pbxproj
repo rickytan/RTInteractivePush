@@ -7,86 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26A9E972175C755E768A9771A67F6C73 /* Pods-InteractivePush_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84359DF919EF2AFC1A4821E16DA9B6A3 /* Pods-InteractivePush_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A22AC43351FC10F11DAD02256FA945B /* UINavigationController+InteractivePush.h in Headers */ = {isa = PBXBuildFile; fileRef = E159BBB177DDDC17DB0A500FAA4C5A9D /* UINavigationController+InteractivePush.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55B7807BF95019744529DF43930A6EB2 /* UINavigationController+InteractivePush-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0CA09BB205C066B86033EDFB3A5E593 /* UINavigationController+InteractivePush-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D7D838009132497B75AEAF478CFCC50 /* Pods-InteractivePush_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F104A32210B50B278A4716DABE9D91 /* Pods-InteractivePush_Example-dummy.m */; };
-		96859750D49811383972C4CA9B101DCF /* UINavigationController+InteractivePush-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 066F58E3360598FFD09FC4183A120E7F /* UINavigationController+InteractivePush-dummy.m */; };
-		9ACCFBB358D51074A9848D50C134A2A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
-		AA8BBC6E3D90F0DA5A579091E060B1DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		B50CC12FC349CBCE912FBF76E78758B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		CDE56064E5461DC5BD7B873EEFD76FAD /* UINavigationController+InteractivePush.m in Sources */ = {isa = PBXBuildFile; fileRef = D19091C74F02B0EB6B2FAD7F3709712C /* UINavigationController+InteractivePush.m */; };
+		1935388FF2FA4603897B8B0B5620BB38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		2861B028B7C07969971803350307D150 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		3A23EEA1C8F8C55D7AC9CB03A56BD0B9 /* Pods-InteractivePush_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84359DF919EF2AFC1A4821E16DA9B6A3 /* Pods-InteractivePush_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D48ECC2746616F414EBC8ADBDC206F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		52515DB796634B9B918C2B33643A2449 /* UINavigationController+InteractivePush.m in Sources */ = {isa = PBXBuildFile; fileRef = 98FB5E558EA7FCED83D9A979DC1062CD /* UINavigationController+InteractivePush.m */; };
+		5DE2AB84A1CA9A0A94A65547F113158A /* RTInteractivePush-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A82C83A893A88AE8598A6E721C9C23A7 /* RTInteractivePush-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FA9B2FE1A2462E24B8B21620F2C2312 /* Pods-InteractivePush_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F104A32210B50B278A4716DABE9D91 /* Pods-InteractivePush_Example-dummy.m */; };
+		C22C62D843043A11880485D2297BE4C8 /* UINavigationController+InteractivePush.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCC6E44EC18FDB08FADC8310291F5CC /* UINavigationController+InteractivePush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9A08EFAF9547660090695622C6969CC /* RTInteractivePush-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE7115D8D6D0ED8F2D460C7C63AB2F1 /* RTInteractivePush-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AFB0F1BAB648186720DC579F5959352C /* PBXContainerItemProxy */ = {
+		2A9C0F4E840485013313E546FCF4898B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1DB2349D8AB2D3207701448C8E1A536D;
-			remoteInfo = "UINavigationController+InteractivePush";
+			remoteGlobalIDString = 9214B7194429FA659B08F96CDC072CA5;
+			remoteInfo = RTInteractivePush;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		066F58E3360598FFD09FC4183A120E7F /* UINavigationController+InteractivePush-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+InteractivePush-dummy.m"; sourceTree = "<group>"; };
+		0B44CC72366F6A757D8DC7A223A50EAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13338AFE9ED2C87DAC1357B48D0A608A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A98A11F230E6C7776669378E90B781 /* RTInteractivePush-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RTInteractivePush-prefix.pch"; sourceTree = "<group>"; };
 		1ECFF8D794584133B751BB7869A0723F /* Pods-InteractivePush_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InteractivePush_Example.release.xcconfig"; sourceTree = "<group>"; };
-		274544DC6DE054B15E32CDDE0583C11A /* UINavigationController+InteractivePush-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+InteractivePush-prefix.pch"; sourceTree = "<group>"; };
+		238C114C69868A655E6193568E6F499E /* RTInteractivePush.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RTInteractivePush.modulemap; sourceTree = "<group>"; };
 		45F104A32210B50B278A4716DABE9D91 /* Pods-InteractivePush_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InteractivePush_Example-dummy.m"; sourceTree = "<group>"; };
 		5B6F3440E6A7396C4372D61345434A4E /* Pods-InteractivePush_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InteractivePush_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		5CCC6E44EC18FDB08FADC8310291F5CC /* UINavigationController+InteractivePush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+InteractivePush.h"; sourceTree = "<group>"; };
 		5F217D4F9504A0896956EDBDDAE3C17B /* Pods-InteractivePush_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-InteractivePush_Example.modulemap"; sourceTree = "<group>"; };
+		61587D57BC51C8C0E449C2D898A07E88 /* RTInteractivePush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RTInteractivePush.framework; path = RTInteractivePush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		649ADBB23CBCB3B158613B7C51959A7A /* Pods-InteractivePush_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InteractivePush_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		84359DF919EF2AFC1A4821E16DA9B6A3 /* Pods-InteractivePush_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InteractivePush_Example-umbrella.h"; sourceTree = "<group>"; };
 		85E8C76C21DA216FAAF6C5752011E396 /* Pods-InteractivePush_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InteractivePush_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8ED0EA18973635B783ACF50B9EB7630D /* RTInteractivePush.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RTInteractivePush.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B6604177F2304C8F910A3462E3A3FBB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98FB5E558EA7FCED83D9A979DC1062CD /* UINavigationController+InteractivePush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+InteractivePush.m"; sourceTree = "<group>"; };
 		A2614A311C49EF6DB7C6AC9F3AA9F8D4 /* Pods-InteractivePush_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InteractivePush_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A6531B4A977F77EE87555A63E2B63478 /* UINavigationController+InteractivePush.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UINavigationController+InteractivePush.xcconfig"; sourceTree = "<group>"; };
+		A82C83A893A88AE8598A6E721C9C23A7 /* RTInteractivePush-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RTInteractivePush-umbrella.h"; sourceTree = "<group>"; };
+		ABE7115D8D6D0ED8F2D460C7C63AB2F1 /* RTInteractivePush-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RTInteractivePush-dummy.m"; sourceTree = "<group>"; };
+		BADFD20C8A9A4411D52ACA999157CBAD /* Pods_InteractivePush_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_InteractivePush_Example.framework; path = "Pods-InteractivePush_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB99B7B769EDD816BF8D4A99966662EA /* Pods-InteractivePush_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InteractivePush_Example-resources.sh"; sourceTree = "<group>"; };
-		BF916993C6A26178104A67EFFEB8B8A0 /* Pods_InteractivePush_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_InteractivePush_Example.framework; path = "Pods-InteractivePush_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB99CE5329D14754974C1F471F0A9A18 /* UINavigationController+InteractivePush.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UINavigationController+InteractivePush.modulemap"; sourceTree = "<group>"; };
-		D19091C74F02B0EB6B2FAD7F3709712C /* UINavigationController+InteractivePush.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+InteractivePush.m"; sourceTree = "<group>"; };
-		DD9D9848BE0EFD69F4281669C0316B54 /* RTInteractivePush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RTInteractivePush.framework; path = "UINavigationController+InteractivePush.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0CA09BB205C066B86033EDFB3A5E593 /* UINavigationController+InteractivePush-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+InteractivePush-umbrella.h"; sourceTree = "<group>"; };
-		E159BBB177DDDC17DB0A500FAA4C5A9D /* UINavigationController+InteractivePush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+InteractivePush.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		25C6ECFA5338F919CAACE17C572D453C /* Frameworks */ = {
+		60E71E5C4B041AB96517FE531A19E728 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B50CC12FC349CBCE912FBF76E78758B6 /* Foundation.framework in Frameworks */,
+				2861B028B7C07969971803350307D150 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56447EEC94273798212CF9BD7824C42E /* Frameworks */ = {
+		E8F822A1FBD4CC676D6AFC3BDE3CB220 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8BBC6E3D90F0DA5A579091E060B1DF /* Foundation.framework in Frameworks */,
-				9ACCFBB358D51074A9848D50C134A2A8 /* UIKit.framework in Frameworks */,
+				4D48ECC2746616F414EBC8ADBDC206F2 /* Foundation.framework in Frameworks */,
+				1935388FF2FA4603897B8B0B5620BB38 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1982FEC7FAAD840BE49BF69E7CC53865 /* Support Files */ = {
+		074DE0CD482CD74400824354D59EECAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B6604177F2304C8F910A3462E3A3FBB /* Info.plist */,
-				CB99CE5329D14754974C1F471F0A9A18 /* UINavigationController+InteractivePush.modulemap */,
-				A6531B4A977F77EE87555A63E2B63478 /* UINavigationController+InteractivePush.xcconfig */,
-				066F58E3360598FFD09FC4183A120E7F /* UINavigationController+InteractivePush-dummy.m */,
-				274544DC6DE054B15E32CDDE0583C11A /* UINavigationController+InteractivePush-prefix.pch */,
-				E0CA09BB205C066B86033EDFB3A5E593 /* UINavigationController+InteractivePush-umbrella.h */,
+				BADFD20C8A9A4411D52ACA999157CBAD /* Pods_InteractivePush_Example.framework */,
+				61587D57BC51C8C0E449C2D898A07E88 /* RTInteractivePush.framework */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/UINavigationController+InteractivePush";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		3B32F0B6349BF5053B9CF90BB12C64FD /* Targets Support Files */ = {
@@ -105,42 +100,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4C255A26C1172D4D48888CAC7D194314 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AB5EDFEEF02B75955BE6BF38CC309417 /* UINavigationController+InteractivePush */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		5CFBD3354F4DB17D6B3F2292F9C9652B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E159BBB177DDDC17DB0A500FAA4C5A9D /* UINavigationController+InteractivePush.h */,
-				D19091C74F02B0EB6B2FAD7F3709712C /* UINavigationController+InteractivePush.m */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				4C255A26C1172D4D48888CAC7D194314 /* Development Pods */,
+				CC68FC2FEE1456DD4C4CA797668878CE /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				8495EA1752E5569E3DDBEC8253E2137A /* Products */,
+				074DE0CD482CD74400824354D59EECAC /* Products */,
 				3B32F0B6349BF5053B9CF90BB12C64FD /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8495EA1752E5569E3DDBEC8253E2137A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BF916993C6A26178104A67EFFEB8B8A0 /* Pods_InteractivePush_Example.framework */,
-				DD9D9848BE0EFD69F4281669C0316B54 /* RTInteractivePush.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		890465CBA9F0CF9FAFAFAD224256CF43 /* Pods-InteractivePush_Example */ = {
@@ -161,14 +129,22 @@
 			path = "Target Support Files/Pods-InteractivePush_Example";
 			sourceTree = "<group>";
 		};
-		AB5EDFEEF02B75955BE6BF38CC309417 /* UINavigationController+InteractivePush */ = {
+		CC68FC2FEE1456DD4C4CA797668878CE /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5CFBD3354F4DB17D6B3F2292F9C9652B /* Classes */,
-				1982FEC7FAAD840BE49BF69E7CC53865 /* Support Files */,
+				E826EF79D3352C19E6CEC289D95C8F29 /* RTInteractivePush */,
 			);
-			name = "UINavigationController+InteractivePush";
-			path = ../..;
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D39DE8BE6EDC5F58C6D7EFF224C51402 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5CCC6E44EC18FDB08FADC8310291F5CC /* UINavigationController+InteractivePush.h */,
+				98FB5E558EA7FCED83D9A979DC1062CD /* UINavigationController+InteractivePush.m */,
+			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
@@ -180,62 +156,86 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		E826EF79D3352C19E6CEC289D95C8F29 /* RTInteractivePush */ = {
+			isa = PBXGroup;
+			children = (
+				D39DE8BE6EDC5F58C6D7EFF224C51402 /* Classes */,
+				E8C14F9425AA3DFBD7E9FB5B48993CEC /* Support Files */,
+			);
+			name = RTInteractivePush;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E8C14F9425AA3DFBD7E9FB5B48993CEC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B44CC72366F6A757D8DC7A223A50EAB /* Info.plist */,
+				238C114C69868A655E6193568E6F499E /* RTInteractivePush.modulemap */,
+				8ED0EA18973635B783ACF50B9EB7630D /* RTInteractivePush.xcconfig */,
+				ABE7115D8D6D0ED8F2D460C7C63AB2F1 /* RTInteractivePush-dummy.m */,
+				17A98A11F230E6C7776669378E90B781 /* RTInteractivePush-prefix.pch */,
+				A82C83A893A88AE8598A6E721C9C23A7 /* RTInteractivePush-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RTInteractivePush";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5B7C6FD5B0D8ED6C1918E65155CEF8F4 /* Headers */ = {
+		6B04E315D11B68CDAE11AC9EE8AFE918 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26A9E972175C755E768A9771A67F6C73 /* Pods-InteractivePush_Example-umbrella.h in Headers */,
+				5DE2AB84A1CA9A0A94A65547F113158A /* RTInteractivePush-umbrella.h in Headers */,
+				C22C62D843043A11880485D2297BE4C8 /* UINavigationController+InteractivePush.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F338A118B6CE941CC48EB2065A5D576B /* Headers */ = {
+		80AA7656961326F4C2400C6F6195CD8D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55B7807BF95019744529DF43930A6EB2 /* UINavigationController+InteractivePush-umbrella.h in Headers */,
-				3A22AC43351FC10F11DAD02256FA945B /* UINavigationController+InteractivePush.h in Headers */,
+				3A23EEA1C8F8C55D7AC9CB03A56BD0B9 /* Pods-InteractivePush_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1DB2349D8AB2D3207701448C8E1A536D /* UINavigationController+InteractivePush */ = {
+		9214B7194429FA659B08F96CDC072CA5 /* RTInteractivePush */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE9E9DBE8B239FC6918DF4D530B382BE /* Build configuration list for PBXNativeTarget "UINavigationController+InteractivePush" */;
+			buildConfigurationList = 52C57B0D0ECA8896427E1B36E465569C /* Build configuration list for PBXNativeTarget "RTInteractivePush" */;
 			buildPhases = (
-				7733B46F130387F65259FCC2B1158854 /* Sources */,
-				56447EEC94273798212CF9BD7824C42E /* Frameworks */,
-				F338A118B6CE941CC48EB2065A5D576B /* Headers */,
+				375F1EF9BC816EDA00D418976FE358FD /* Sources */,
+				E8F822A1FBD4CC676D6AFC3BDE3CB220 /* Frameworks */,
+				6B04E315D11B68CDAE11AC9EE8AFE918 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "UINavigationController+InteractivePush";
-			productName = "UINavigationController+InteractivePush";
-			productReference = DD9D9848BE0EFD69F4281669C0316B54 /* RTInteractivePush.framework */;
+			name = RTInteractivePush;
+			productName = RTInteractivePush;
+			productReference = 61587D57BC51C8C0E449C2D898A07E88 /* RTInteractivePush.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F9327C1802C0DA515477270435CEEA5A /* Pods-InteractivePush_Example */ = {
+		B6EC451315D55B3FC39AE1C06C5B9CD2 /* Pods-InteractivePush_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36B24CE7214FB14BE6924F735E8BAADC /* Build configuration list for PBXNativeTarget "Pods-InteractivePush_Example" */;
+			buildConfigurationList = AAA608DE218C0D7492DF81D97F9C1DA9 /* Build configuration list for PBXNativeTarget "Pods-InteractivePush_Example" */;
 			buildPhases = (
-				BB5F7F8183A1989E579AAC0EAFAC7C0C /* Sources */,
-				25C6ECFA5338F919CAACE17C572D453C /* Frameworks */,
-				5B7C6FD5B0D8ED6C1918E65155CEF8F4 /* Headers */,
+				DFC30EF88321073854BD1CC49F0CCA85 /* Sources */,
+				60E71E5C4B041AB96517FE531A19E728 /* Frameworks */,
+				80AA7656961326F4C2400C6F6195CD8D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CB89F6BDD0D611BC99921777F9826631 /* PBXTargetDependency */,
+				85683BB1717311A4389987719044645E /* PBXTargetDependency */,
 			);
 			name = "Pods-InteractivePush_Example";
 			productName = "Pods-InteractivePush_Example";
-			productReference = BF916993C6A26178104A67EFFEB8B8A0 /* Pods_InteractivePush_Example.framework */;
+			productReference = BADFD20C8A9A4411D52ACA999157CBAD /* Pods_InteractivePush_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -255,42 +255,42 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8495EA1752E5569E3DDBEC8253E2137A /* Products */;
+			productRefGroup = 074DE0CD482CD74400824354D59EECAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9327C1802C0DA515477270435CEEA5A /* Pods-InteractivePush_Example */,
-				1DB2349D8AB2D3207701448C8E1A536D /* UINavigationController+InteractivePush */,
+				B6EC451315D55B3FC39AE1C06C5B9CD2 /* Pods-InteractivePush_Example */,
+				9214B7194429FA659B08F96CDC072CA5 /* RTInteractivePush */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7733B46F130387F65259FCC2B1158854 /* Sources */ = {
+		375F1EF9BC816EDA00D418976FE358FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96859750D49811383972C4CA9B101DCF /* UINavigationController+InteractivePush-dummy.m in Sources */,
-				CDE56064E5461DC5BD7B873EEFD76FAD /* UINavigationController+InteractivePush.m in Sources */,
+				E9A08EFAF9547660090695622C6969CC /* RTInteractivePush-dummy.m in Sources */,
+				52515DB796634B9B918C2B33643A2449 /* UINavigationController+InteractivePush.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB5F7F8183A1989E579AAC0EAFAC7C0C /* Sources */ = {
+		DFC30EF88321073854BD1CC49F0CCA85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D7D838009132497B75AEAF478CFCC50 /* Pods-InteractivePush_Example-dummy.m in Sources */,
+				6FA9B2FE1A2462E24B8B21620F2C2312 /* Pods-InteractivePush_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CB89F6BDD0D611BC99921777F9826631 /* PBXTargetDependency */ = {
+		85683BB1717311A4389987719044645E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "UINavigationController+InteractivePush";
-			target = 1DB2349D8AB2D3207701448C8E1A536D /* UINavigationController+InteractivePush */;
-			targetProxy = AFB0F1BAB648186720DC579F5959352C /* PBXContainerItemProxy */;
+			name = RTInteractivePush;
+			target = 9214B7194429FA659B08F96CDC072CA5 /* RTInteractivePush */;
+			targetProxy = 2A9C0F4E840485013313E546FCF4898B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -339,6 +339,41 @@
 			};
 			name = Debug;
 		};
+		089BFE8AEE35A248AAE8C97A0E89A4CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 649ADBB23CBCB3B158613B7C51959A7A /* Pods-InteractivePush_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-InteractivePush_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-InteractivePush_Example/Pods-InteractivePush_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_InteractivePush_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -379,38 +414,7 @@
 			};
 			name = Release;
 		};
-		6A4C6D1AA6BE41617AAD9E0EA54EE20B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6531B4A977F77EE87555A63E2B63478 /* UINavigationController+InteractivePush.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UINavigationController+InteractivePush/UINavigationController+InteractivePush-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UINavigationController+InteractivePush/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UINavigationController+InteractivePush/UINavigationController+InteractivePush.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = RTInteractivePush;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A4B2641F19A1361408EA4A17446DA518 /* Release */ = {
+		6F0CA85FBF68B2973F581A3CA6A6494A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ECFF8D794584133B751BB7869A0723F /* Pods-InteractivePush_Example.release.xcconfig */;
 			buildSettings = {
@@ -445,44 +449,9 @@
 			};
 			name = Release;
 		};
-		BCD42054F6A8EFBE101AE43F87DFED8D /* Debug */ = {
+		9BC878D89F8C0C6381A716E4FDA81ACA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 649ADBB23CBCB3B158613B7C51959A7A /* Pods-InteractivePush_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-InteractivePush_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-InteractivePush_Example/Pods-InteractivePush_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_InteractivePush_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FDA8FA6B32DB07EC6032518D18A57A31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6531B4A977F77EE87555A63E2B63478 /* UINavigationController+InteractivePush.xcconfig */;
+			baseConfigurationReference = 8ED0EA18973635B783ACF50B9EB7630D /* RTInteractivePush.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -495,12 +464,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UINavigationController+InteractivePush/UINavigationController+InteractivePush-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UINavigationController+InteractivePush/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/RTInteractivePush/RTInteractivePush-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RTInteractivePush/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UINavigationController+InteractivePush/UINavigationController+InteractivePush.modulemap";
+				MODULEMAP_FILE = "Target Support Files/RTInteractivePush/RTInteractivePush.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = RTInteractivePush;
 				SDKROOT = iphoneos;
@@ -510,6 +479,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		A94579CB5BB4547145F3D02AFC6B364B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ED0EA18973635B783ACF50B9EB7630D /* RTInteractivePush.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RTInteractivePush/RTInteractivePush-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RTInteractivePush/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RTInteractivePush/RTInteractivePush.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RTInteractivePush;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -523,20 +523,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36B24CE7214FB14BE6924F735E8BAADC /* Build configuration list for PBXNativeTarget "Pods-InteractivePush_Example" */ = {
+		52C57B0D0ECA8896427E1B36E465569C /* Build configuration list for PBXNativeTarget "RTInteractivePush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BCD42054F6A8EFBE101AE43F87DFED8D /* Debug */,
-				A4B2641F19A1361408EA4A17446DA518 /* Release */,
+				A94579CB5BB4547145F3D02AFC6B364B /* Debug */,
+				9BC878D89F8C0C6381A716E4FDA81ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE9E9DBE8B239FC6918DF4D530B382BE /* Build configuration list for PBXNativeTarget "UINavigationController+InteractivePush" */ = {
+		AAA608DE218C0D7492DF81D97F9C1DA9 /* Build configuration list for PBXNativeTarget "Pods-InteractivePush_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A4C6D1AA6BE41617AAD9E0EA54EE20B /* Debug */,
-				FDA8FA6B32DB07EC6032518D18A57A31 /* Release */,
+				089BFE8AEE35A248AAE8C97A0E89A4CF /* Debug */,
+				6F0CA85FBF68B2973F581A3CA6A6494A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

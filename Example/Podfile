@@ -1,5 +1,5 @@
 use_frameworks!
 
 target 'InteractivePush_Example' do
-  pod 'UINavigationController+InteractivePush', :path => '../'
+  pod 'RTInteractivePush', :path => '../'
 end

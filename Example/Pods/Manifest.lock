@@ -1,16 +1,16 @@
 PODS:
-  - UINavigationController+InteractivePush (0.1.0)
+  - RTInteractivePush (0.1.0)
 
 DEPENDENCIES:
-  - UINavigationController+InteractivePush (from `../`)
+  - RTInteractivePush (from `../`)
 
 EXTERNAL SOURCES:
-  UINavigationController+InteractivePush:
+  RTInteractivePush:
     :path: "../"
 
 SPEC CHECKSUMS:
-  UINavigationController+InteractivePush: 90e5e68833d1f57c6bb307cf5806f396dc1f786b
+  RTInteractivePush: 3a7dd775cacc9a912bd6cacbce7beec0e18d59b3
 
-PODFILE CHECKSUM: bd580c25c884b4c9b19806e54b2066eedb3f23d7
+PODFILE CHECKSUM: e86e0f7e40baf06c2bc8ab4193e0d6ed5c3767cb
 
 COCOAPODS: 1.1.1

@@ -16,8 +16,8 @@
 		6003F59E195388D20070C39A /* RTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* RTAppDelegate.m */; };
 		6003F5A7195388D20070C39A /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* RTViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		9C0A4DEA1E30AFD200DB8124 /* UINavigationController+InteractivePush.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9C0A4DE91E30AFD200DB8124 /* UINavigationController+InteractivePush.podspec */; };
 		9C0A4DEC1E30B16800DB8124 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0A4DEB1E30B16800DB8124 /* Launch.storyboard */; };
+		9C0A4DEE1E31B04E00DB8124 /* RTInteractivePush.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9C0A4DED1E31B04E00DB8124 /* RTInteractivePush.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,8 +45,8 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		61A82154841A2B9CC81F8D8B /* Pods_InteractivePush_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InteractivePush_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C0A4DE91E30AFD200DB8124 /* UINavigationController+InteractivePush.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "UINavigationController+InteractivePush.podspec"; path = "../UINavigationController+InteractivePush.podspec"; sourceTree = "<group>"; };
 		9C0A4DEB1E30B16800DB8124 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		9C0A4DED1E31B04E00DB8124 /* RTInteractivePush.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RTInteractivePush.podspec; path = ../RTInteractivePush.podspec; sourceTree = "<group>"; };
 		EC75B8153A55E634ACFF5119 /* Pods_InteractivePush_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InteractivePush_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD00FAFA7DE65194A1B61D30 /* Pods-InteractivePush_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractivePush_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-InteractivePush_Example/Pods-InteractivePush_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +147,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				9C0A4DE91E30AFD200DB8124 /* UINavigationController+InteractivePush.podspec */,
+				9C0A4DED1E31B04E00DB8124 /* RTInteractivePush.podspec */,
 				0072DE41BD16D639AD3D7C4F /* README.md */,
 				52E7D2FF80BACAE23DB15DED /* LICENSE */,
 			);
@@ -227,8 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				9C0A4DEE1E31B04E00DB8124 /* RTInteractivePush.podspec in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-				9C0A4DEA1E30AFD200DB8124 /* UINavigationController+InteractivePush.podspec in Resources */,
 				9C0A4DEC1E30B16800DB8124 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

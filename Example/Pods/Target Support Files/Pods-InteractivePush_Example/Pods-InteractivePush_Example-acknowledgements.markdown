@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## UINavigationController+InteractivePush
+## RTInteractivePush
 
 Copyright (c) 2017 Ricky Tan <ricky.tan.xin@gmail.com>
 
