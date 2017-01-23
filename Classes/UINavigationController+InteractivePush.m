@@ -40,7 +40,7 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
                       duration:[self transitionDuration:transitionContext]
                        options:[transitionContext isInteractive] ? UIViewAnimationOptionCurveLinear : UIViewAnimationOptionCurveEaseIn
                     animations:^{
-                        fromVC.view.transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(containerView.bounds) / 3, 0);
+                        fromVC.view.transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(containerView.bounds) * 2 / 7, 0);
                         toVC.view.transform = CGAffineTransformIdentity;
                     }
                     completion:^(BOOL finished) {
@@ -150,8 +150,8 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
 
 - (id)forwardingTargetForSelector:(SEL)aSelector
 {
-    if ([self.rt_delegate respondsToSelector:aSelector]) {
-        return self.rt_delegate;
+    if ([self.delegate respondsToSelector:aSelector]) {
+        return self.delegate;
     }
     return nil;
 }
