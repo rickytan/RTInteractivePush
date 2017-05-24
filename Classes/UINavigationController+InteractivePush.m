@@ -53,14 +53,20 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
 
 @end
 
+@interface RTNavigationDelegater : NSObject <UINavigationControllerDelegate>
+@property (nonatomic, weak) UINavigationController *navigationController;
++ (instancetype)delegaterWithNavigationController:(UINavigationController *)navigation;
+@end
+
+
 @implementation UINavigationController (RTInteractivePush)
 
 + (void)load
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        rt_swizzle_selector(self, @selector(setDelegate:), @selector(setRt_delegate:));
-        rt_swizzle_selector(self, @selector(delegate), @selector(rt_delegate));
+        rt_swizzle_selector(self, @selector(setDelegate:), @selector(setIp_delegate:));
+        rt_swizzle_selector(self, @selector(delegate), @selector(ip_delegate));
     });
 }
 
@@ -73,17 +79,23 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
     }
 }
 
-- (void)setRt_delegate:(id<UINavigationControllerDelegate>)delegate
+- (void)setIp_delegate:(id<UINavigationControllerDelegate>)delegate
 {
-    objc_setAssociatedObject(self, @selector(rt_delegate), delegate, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(ip_delegate), delegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (id<UINavigationControllerDelegate>)rt_delegate
+- (id<UINavigationControllerDelegate>)ip_delegate
 {
-    return objc_getAssociatedObject(self, @selector(rt_delegate));
+    return objc_getAssociatedObject(self, @selector(ip_delegate));
 }
 
 #pragma mark - Methods
+
+- (void)_setRealDelegate:(id<UINavigationControllerDelegate>)delegate
+{
+    objc_setAssociatedObject(self, @selector(_setRealDelegate:), delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.ip_delegate = delegate;
+}
 
 - (void)rt_setupInteractivePush
 {
@@ -94,14 +106,14 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
     [self.view addGestureRecognizer:pan];
     
     self.rt_interactivePushGestureRecognizer = pan;
-    self.rt_delegate = self;
+    [self _setRealDelegate:[RTNavigationDelegater delegaterWithNavigationController:self]];
 }
 
-- (void)rt_distoryInteractivePush
+- (void)rt_distroyInteractivePush
 {
     [self.view removeGestureRecognizer:self.rt_interactivePushGestureRecognizer];
     self.rt_interactivePushGestureRecognizer = nil;
-    self.rt_delegate = nil;
+    [self _setRealDelegate:nil];
 }
 
 - (void)rt_onPushGesture:(UIPanGestureRecognizer *)gesture
@@ -174,7 +186,7 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
                 [self rt_setupInteractivePush];
             }
             else {
-                [self rt_distoryInteractivePush];
+                [self rt_distroyInteractivePush];
             }
         }
         else {
@@ -203,19 +215,47 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
     return percent;
 }
 
+@end
+
+
+@implementation UIViewController (RTInteractivePush)
+
+- (nullable __kindof UIViewController *)rt_nextSiblingController
+{
+    return nil;
+}
+
+@end
+
+
+
+@implementation RTNavigationDelegater
+
++ (instancetype)delegaterWithNavigationController:(UINavigationController *)navigation
+{
+    RTNavigationDelegater *delegater = [[self alloc] init];
+    delegater.navigationController = navigation;
+    return delegater;
+}
+
+- (void)dealloc
+{
+    
+}
+
 #pragma mark - UINavigationController Delegate
 
 - (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                                    interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>)animationController
 {
     id <UIViewControllerInteractiveTransitioning> transitioning = nil;
-    if ([self.delegate respondsToSelector:@selector(navigationController:interactionControllerForAnimationController:)]) {
-        transitioning = [self.delegate navigationController:navigationController
-                interactionControllerForAnimationController:animationController];
+    if ([self.navigationController.delegate respondsToSelector:@selector(navigationController:interactionControllerForAnimationController:)]) {
+        transitioning = [self.navigationController.delegate navigationController:navigationController
+                                     interactionControllerForAnimationController:animationController];
     }
     
-    if (!transitioning) {
-        transitioning = self.rt_interactiveTransition;
+    if (!transitioning && self.navigationController.rt_interactivePushGestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        transitioning = self.navigationController.rt_interactiveTransition;
     }
     return transitioning;
 }
@@ -226,28 +266,18 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
                                                            toViewController:(UIViewController *)toVC
 {
     id <UIViewControllerAnimatedTransitioning> transitioning = nil;
-    if ([self.delegate respondsToSelector:@selector(navigationController:animationControllerForOperation:fromViewController:toViewController:)]) {
-        transitioning = [self.delegate navigationController:navigationController
-                            animationControllerForOperation:operation
-                                         fromViewController:fromVC
-                                           toViewController:toVC];
+    if ([self.navigationController.delegate respondsToSelector:@selector(navigationController:animationControllerForOperation:fromViewController:toViewController:)]) {
+        transitioning = [self.navigationController.delegate navigationController:navigationController
+                                                 animationControllerForOperation:operation
+                                                              fromViewController:fromVC
+                                                                toViewController:toVC];
     }
     if (!transitioning) {
-        if (operation == UINavigationControllerOperationPush && self.rt_interactivePushGestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        if (operation == UINavigationControllerOperationPush && self.navigationController.rt_interactivePushGestureRecognizer.state == UIGestureRecognizerStateBegan) {
             transitioning = [[RTNavigationPushTransition alloc] init];
         }
     }
     return transitioning;
-}
-
-@end
-
-
-@implementation UIViewController (RTInteractivePush)
-
-- (nullable __kindof UIViewController *)rt_nextSiblingController
-{
-    return nil;
 }
 
 @end

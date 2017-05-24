@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface UINavigationController (RTInteractivePush)
-@property (nonatomic, assign, getter=rt_isInteractivePushEnabled) BOOL rt_enableInteractivePush;
+@property (nonatomic, assign, getter=rt_isInteractivePushEnabled) IBInspectable BOOL rt_enableInteractivePush;
 @property (nonatomic, readonly, nullable) UIPanGestureRecognizer *rt_interactivePushGestureRecognizer;
 @end
 
