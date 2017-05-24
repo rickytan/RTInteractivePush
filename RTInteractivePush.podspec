@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'RTInteractivePush'
   s.version          = '0.1.1'
   s.module_name      = 'RTInteractivePush'
-s.summary          = 'UINavigationController interactive push support Edit'
+  s.summary          = 'UINavigationController interactive push support'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,7 +19,9 @@ s.summary          = 'UINavigationController interactive push support Edit'
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A easy to use interactive pushing support for UINavigationController, when
+ Enabled users can push a new VC by swiping from right edge to left, just like
+ pop current VC from left edge to right.
                        DESC
 
   s.homepage         = 'https://github.com/rickytan/RTInteractivePush'
