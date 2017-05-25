@@ -10,7 +10,9 @@ Enjoy the interactive poping feature of `UINavigationController`? But where is t
 ## Example
 ```objective-c
 - (void)viewDidLoad {
+    [super viewDidLoad];
     self.navigationController.rt_enableInteractivePush = YES;
+    ...
 }
 
 - (nullable __kindof UIViewController *)rt_nextSiblingController
