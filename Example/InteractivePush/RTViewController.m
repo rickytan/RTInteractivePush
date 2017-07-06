@@ -31,6 +31,7 @@
     self.view.backgroundColor = [UIColor blueColor];
     
     self.navigationController.rt_enableInteractivePush = YES;
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Comments"
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:self
@@ -57,6 +58,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Interactive Push
 
 - (nullable __kindof UIViewController *)rt_nextSiblingController
 {
