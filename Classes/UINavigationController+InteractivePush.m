@@ -38,12 +38,12 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
 
 - (void)setRt_originDelegate:(id<UINavigationControllerDelegate>)delegate
 {
-    objc_setAssociatedObject(self, @selector(ip_originDelegate), delegate, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(rt_originDelegate), delegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (id<UINavigationControllerDelegate>)ip_originDelegate
+- (id<UINavigationControllerDelegate>)rt_originDelegate
 {
-    return objc_getAssociatedObject(self, @selector(ip_originDelegate));
+    return objc_getAssociatedObject(self, @selector(rt_originDelegate));
 }
 
 #pragma mark - Methods
@@ -71,7 +71,7 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
     [self.view removeGestureRecognizer:self.rt_interactivePushGestureRecognizer];
     self.rt_interactivePushGestureRecognizer = nil;
     [self _setTransitionDelegate:nil];
-    self.delegate = self.ip_originDelegate;
+    self.delegate = self.rt_originDelegate;
     self.rt_originDelegate = nil;
 }
 
@@ -205,13 +205,13 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
 
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
-    return [super respondsToSelector:aSelector] || [self.navigationController.ip_originDelegate respondsToSelector:aSelector];
+    return [super respondsToSelector:aSelector] || [self.navigationController.rt_originDelegate respondsToSelector:aSelector];
 }
 
 - (id)forwardingTargetForSelector:(SEL)aSelector
 {
-    if ([self.navigationController.ip_originDelegate respondsToSelector:aSelector]) {
-        return self.navigationController.ip_originDelegate;
+    if ([self.navigationController.rt_originDelegate respondsToSelector:aSelector]) {
+        return self.navigationController.rt_originDelegate;
     }
     return nil;
 }
@@ -222,8 +222,8 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
                                    interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>)animationController
 {
     id <UIViewControllerInteractiveTransitioning> transitioning = nil;
-    if ([self.navigationController.ip_originDelegate respondsToSelector:@selector(navigationController:interactionControllerForAnimationController:)]) {
-        transitioning = [self.navigationController.ip_originDelegate navigationController:navigationController
+    if ([self.navigationController.rt_originDelegate respondsToSelector:@selector(navigationController:interactionControllerForAnimationController:)]) {
+        transitioning = [self.navigationController.rt_originDelegate navigationController:navigationController
                                         interactionControllerForAnimationController:animationController];
     }
     
@@ -239,8 +239,8 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
                                                            toViewController:(UIViewController *)toVC
 {
     id <UIViewControllerAnimatedTransitioning> transitioning = nil;
-    if ([self.navigationController.ip_originDelegate respondsToSelector:@selector(navigationController:animationControllerForOperation:fromViewController:toViewController:)]) {
-        transitioning = [self.navigationController.ip_originDelegate navigationController:navigationController
+    if ([self.navigationController.rt_originDelegate respondsToSelector:@selector(navigationController:animationControllerForOperation:fromViewController:toViewController:)]) {
+        transitioning = [self.navigationController.rt_originDelegate navigationController:navigationController
                                                     animationControllerForOperation:operation
                                                                  fromViewController:fromVC
                                                                    toViewController:toVC];
@@ -283,7 +283,7 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
                     completion:^(BOOL finished) {
                         if (finished) {
                             fromVC.view.transform = CGAffineTransformIdentity;
-                            fromVC.navigationController.delegate = fromVC.navigationController.ip_originDelegate;
+                            fromVC.navigationController.delegate = fromVC.navigationController.rt_originDelegate;
                             fromVC.navigationController.rt_originDelegate = nil;
                         }
                         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];

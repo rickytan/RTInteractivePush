@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RTInteractivePush'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.module_name      = 'RTInteractivePush'
   s.summary          = 'UINavigationController interactive push support'
 
@@ -35,5 +35,4 @@ A easy to use interactive pushing support for UINavigationController, when
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
