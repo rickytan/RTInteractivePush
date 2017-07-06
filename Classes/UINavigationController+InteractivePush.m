@@ -308,7 +308,7 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
                       duration:[self transitionDuration:transitionContext]
                        options:[transitionContext isInteractive] ? UIViewAnimationOptionCurveLinear : UIViewAnimationOptionCurveEaseIn
                     animations:^{
-                        fromVC.view.transform = CGAffineTransformMakeTranslation(-112, 0);
+                        fromVC.view.transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(containerView.bounds) * 112 / 375, 0);
                         wrapperView.transform = CGAffineTransformIdentity;
                         shadowView.alpha      = 1.f;
                     }
