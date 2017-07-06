@@ -8,6 +8,9 @@
 Enjoy the interactive poping feature of `UINavigationController`? But where is the missing interactive pushing? Here it is.
 
 ## Example
+
+![ScreenCap](https://user-images.githubusercontent.com/1250207/27914013-7a103aba-6294-11e7-949d-a3fb340e86ce.gif)
+
 ```objective-c
 - (void)viewDidLoad {
     [super viewDidLoad];
