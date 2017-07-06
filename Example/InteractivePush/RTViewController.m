@@ -28,8 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor blueColor];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+
     self.navigationController.rt_enableInteractivePush = YES;
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Comments"

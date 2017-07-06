@@ -258,6 +258,25 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
 
 @implementation RTNavigationPushTransition
 
+- (UIImage *)shadowImage __attribute((const))
+{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(9, 1), NO, 0);
+    
+    const CGFloat locations[] = {0.f, 1.f};
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (CFArrayRef)@[(__bridge id)[UIColor clearColor].CGColor,
+                                                                                  (__bridge id)[UIColor colorWithWhite:24.f/255
+                                                                                                    alpha:7.f/33].CGColor], locations);
+    CGContextDrawLinearGradient(UIGraphicsGetCurrentContext(), gradient, CGPointZero, CGPointMake(9, 0), 0);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorSpace);
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext
 {
     return UINavigationControllerHideShowBarDuration;
@@ -266,25 +285,41 @@ static void rt_swizzle_selector(Class cls, SEL origin, SEL swizzle) {
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIView *containerView = [transitionContext containerView];
+    UIViewController *toVC   = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIView *containerView    = [transitionContext containerView];
     
     fromVC.view.transform = CGAffineTransformIdentity;
-    toVC.view.frame = containerView.bounds;
-    toVC.view.transform = CGAffineTransformMakeTranslation(CGRectGetWidth(containerView.bounds), 0);
-    [containerView addSubview:toVC.view];
+    
+    UIView *wrapperView         = [[UIView alloc] initWithFrame:containerView.bounds];
+    UIImageView *shadowView     = [[UIImageView alloc] initWithFrame:CGRectMake(-9, 0, 9, wrapperView.frame.size.height)];
+    shadowView.alpha            = 0.f;
+    shadowView.image            = [self shadowImage];
+    shadowView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
+    [wrapperView addSubview:shadowView];
+    
+    [containerView addSubview:wrapperView];
+    
+    toVC.view.frame = wrapperView.bounds;
+    [wrapperView addSubview:toVC.view];
+    
+    wrapperView.transform = CGAffineTransformMakeTranslation(CGRectGetWidth(containerView.bounds), 0);
+    
     [UIView transitionWithView:containerView
                       duration:[self transitionDuration:transitionContext]
                        options:[transitionContext isInteractive] ? UIViewAnimationOptionCurveLinear : UIViewAnimationOptionCurveEaseIn
                     animations:^{
-                        fromVC.view.transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(containerView.bounds) * 2 / 7, 0);
-                        toVC.view.transform = CGAffineTransformIdentity;
+                        fromVC.view.transform = CGAffineTransformMakeTranslation(-112, 0);
+                        wrapperView.transform = CGAffineTransformIdentity;
+                        shadowView.alpha      = 1.f;
                     }
                     completion:^(BOOL finished) {
                         if (finished) {
-                            fromVC.view.transform = CGAffineTransformIdentity;
-                            fromVC.navigationController.delegate = fromVC.navigationController.rt_originDelegate;
+                            fromVC.view.transform                         = CGAffineTransformIdentity;
+                            fromVC.navigationController.delegate          = fromVC.navigationController.rt_originDelegate;
                             fromVC.navigationController.rt_originDelegate = nil;
+                            
+                            [containerView addSubview:toVC.view];
+                            [wrapperView removeFromSuperview];
                         }
                         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
                     }];
