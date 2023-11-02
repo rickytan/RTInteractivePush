@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RTInteractivePush'
-  s.version          = '0.1.5'
+  s.version          = `git describe --abbrev=0`.strip
   s.module_name      = 'RTInteractivePush'
   s.summary          = 'UINavigationController interactive push support'
 
@@ -31,7 +31,7 @@ A easy to use interactive pushing support for UINavigationController, when
   s.source           = { :git => 'https://github.com/rickytan/RTInteractivePush.git', :tag => s.version.to_s }
   s.social_media_url = 'https://github.com/rickytan'
 
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '11.0'
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation'
