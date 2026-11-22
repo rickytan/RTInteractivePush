@@ -8,7 +8,7 @@ final class RTInteractivePushTests: XCTestCase {
 
         DispatchQueue.main.async {
             let rootViewController = UIViewController()
-            XCTAssertNil(rootViewController.rt_nextSiblingController())
+            XCTAssertNil(rootViewController.rt_nextSibling())
 
             let navigationController = UINavigationController(rootViewController: rootViewController)
             navigationController.loadViewIfNeeded()
