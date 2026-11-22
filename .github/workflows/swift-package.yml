@@ -1,0 +1,45 @@
+name: Swift Package
+
+on:
+  push:
+    branches: [master]
+    tags: ['*']
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ios:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test the Swift package
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Keep the legacy _Pods.xcodeproj from being selected by xcodebuild.
+          package_dir="$RUNNER_TEMP/RTInteractivePush"
+          mkdir -p "$package_dir"
+          cp -R Package.swift Classes Tests "$package_dir/"
+          cd "$package_dir"
+
+          simulator_id="$(xcrun simctl list devices available --json | jq -r '
+            [.devices | to_entries[] |
+             select(.key | startswith("com.apple.CoreSimulator.SimRuntime.iOS-")) |
+             .value[] | select(.isAvailable and (.name | startswith("iPhone"))) |
+             .udid][0] // empty
+          ')"
+          if [[ -z "$simulator_id" ]]; then
+            echo "::error::No available iPhone simulator found"
+            exit 1
+          fi
+
+          xcodebuild build -scheme RTInteractivePush \
+            -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO
+          xcodebuild test -scheme RTInteractivePush \
+            -destination "platform=iOS Simulator,id=$simulator_id" CODE_SIGNING_ALLOWED=NO
