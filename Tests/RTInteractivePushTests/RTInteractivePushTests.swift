@@ -13,17 +13,17 @@ final class RTInteractivePushTests: XCTestCase {
             let navigationController = UINavigationController(rootViewController: rootViewController)
             navigationController.loadViewIfNeeded()
 
-            XCTAssertFalse(navigationController.rt_enableInteractivePush)
+            XCTAssertFalse(navigationController.rt_isInteractivePushEnabled)
             XCTAssertNil(navigationController.rt_interactivePushGestureRecognizer)
 
-            navigationController.rt_enableInteractivePush = true
-            XCTAssertTrue(navigationController.rt_enableInteractivePush)
+            navigationController.rt_isInteractivePushEnabled = true
+            XCTAssertTrue(navigationController.rt_isInteractivePushEnabled)
             XCTAssertTrue(
                 navigationController.rt_interactivePushGestureRecognizer?.view === navigationController.view
             )
 
-            navigationController.rt_enableInteractivePush = false
-            XCTAssertFalse(navigationController.rt_enableInteractivePush)
+            navigationController.rt_isInteractivePushEnabled = false
+            XCTAssertFalse(navigationController.rt_isInteractivePushEnabled)
             XCTAssertNil(navigationController.rt_interactivePushGestureRecognizer)
             finished.fulfill()
         }
